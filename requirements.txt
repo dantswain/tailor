@@ -1,5 +1,3 @@
-# NOTE this repo uses pipenv, requirements.txt only provided for
-#   those who do not want to use pipenv
 -i https://pypi.org/simple
 appnope==0.1.0 ; sys_platform == 'darwin'
 attrs==19.1.0

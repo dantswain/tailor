@@ -7,3 +7,4 @@ project/target
 target
 raw_data
 parquet_data
+.mypy_cache
