@@ -1,0 +1,9 @@
+.env
+.ipynb_checkpoints
+__pycache__
+*.log
+project/project
+project/target
+target
+raw_data
+parquet_data

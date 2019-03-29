@@ -19,7 +19,8 @@ for official instructions.  If you have a Mac, it should be fairly
 straightforward:
 
 1. Download Spark 2.4.0 (see link above)
-2. Untar the download to some known location (I use `/opt/apache/spark-2.4.0`)
+2. Untar the download to some known location (I use `/opt/apache/spark-2.4.0`).
+   This location will be `SPARK_HOME`.
 3. Make sure you have Java 1.8.0.  If you have homebrew, `brew tap caskroom/versions && brew cask install java8`
 
 To check it out, try running the following:
@@ -47,3 +48,24 @@ Type :help for more information.
 scala> 
 ```
 You can exit with `:quit` or `Ctrl+d`.
+
+### Python
+
+Assuming you have python 3.6 (I recommend
+[pyenv](https://github.com/pyenv/pyenv) to manage python versions) and
+[pipenv](https://pipenv.readthedocs.io/en/latest/), this should be as simple as
+
+```
+pipenv install -d
+```
+
+I have included a `requirements.txt` file, though it may become out of date.
+
+### Scala
+
+This repo uses [sbt](http://www.scala-sbt.org/download.html) (`brew install
+sbt`) to build.  I recommend installing [IntelliJ IDEA Community
+Edition](https://www.jetbrains.com/idea/download/) to work with the scala code,
+though the build can still be done through the command line.  Spark requires
+scala 2.11.x and the included `build.sbt` file will configure that.  If you have
+sbt installed, you do not need to separately install scala.
