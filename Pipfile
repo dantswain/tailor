@@ -8,6 +8,7 @@ autopep8 = "*"
 pylint = "*"
 mypy = "*"
 pyspark-stubs = "*"
+pep8 = "*"
 
 [packages]
 jupyterlab = "*"
