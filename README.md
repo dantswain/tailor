@@ -69,3 +69,41 @@ Edition](https://www.jetbrains.com/idea/download/) to work with the scala code,
 though the build can still be done through the command line.  Spark requires
 scala 2.11.x and the included `build.sbt` file will configure that.  If you have
 sbt installed, you do not need to separately install scala.
+
+### Jupyter
+
+This repo also contains a few [Jupyter](https://jupyter.org/) notebooks.  Some
+are python and some are scala.  To get the scala notebooks to work, you will
+need to install the [toree](https://toree.apache.org/) kernel.  This project's
+Pipfile already includes toree and jupyter, so after running `pipenv install
+-d`, you just need to run
+
+```
+# adjust per your SPARK_HOME
+jupyter toree install --spark_home=/opt/apache/spark-2.4.0
+```
+
+To launch [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), use the
+script provided:
+
+```
+# note you may need to adjust some vars in the script
+./start-spark-notebook.sh
+```
+
+I find Jupyter Lab to work more smoothly in Chrome.  YMMV.
+
+## ETL
+
+Our ETL ([Extract, Transform,
+Load](https://en.wikipedia.org/wiki/Extract,_transform,_load)) step is performed
+with python to make json processing a bit easier.
+
+You can run the ETL either from the command line or through the `etl.ipynb`
+notebook.  To run it from the command line:
+
+```
+# assuming the raw json data is in raw_data/rocdev and we want to write
+#  our parquet to parquet_data/rocdev
+python tailor/etl.py raw_data/rocdev parquet_data/rocdev
+```
