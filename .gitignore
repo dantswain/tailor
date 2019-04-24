@@ -8,3 +8,6 @@ target
 raw_data
 parquet_data
 .mypy_cache
+language_predictions.*
+models
+training_data
